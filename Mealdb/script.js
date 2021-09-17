@@ -1,3 +1,17 @@
+
+
+const searchButton = document.getElementById("button-addon2");
+const searchInput = document.getElementById("search-field");
+
+searchInput.addEventListener("keypress", function(event) {
+    // event.preventDefault();
+    if (event.keyCode == 13)
+    searchButton.click();
+});
+
+
+
+
 const searchFood = () =>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
@@ -11,7 +25,7 @@ const searchFood = () =>{
 const displaySearchResult = meals =>{
     const searchResult = document.getElementById('search-result');
     meals.forEach(meal =>{
-        console.log(meal);
+        // console.log(meal);
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
